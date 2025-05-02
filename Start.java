@@ -6,20 +6,17 @@ public class Start {
         String Expression;
         boolean active = true;
         System.out.println("Enter expression here (type 'exit' to quit):");
-        
-       
+
         try (Scanner scanIn = new Scanner(System.in)) {
             while (active) {
                 Expression = scanIn.nextLine();
 
                 if (Expression.equals("exit")) {
-                    active = false;  
+                    active = false;
                 } else {
                     try {
-                        
                         System.out.println(Calculator.Run(Expression));
                     } catch (Exception e) {
-                       
                         System.out.println("Invalid expression. Please try again.");
                     }
                 }
